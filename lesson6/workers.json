@@ -1,0 +1,34 @@
+{
+  "workers": [
+    {
+      "id": 101,
+      "name": "Tigran",
+      "position": "Senior Developer",
+      "salary": 1250000
+    },
+    {
+      "id": 102,
+      "name": "Narek",
+      "position": "Marketing Specialist",
+      "salary": 250000
+    },
+    {
+      "id": 103,
+      "name": "Anna",
+      "position": "HR",
+      "salary": 660000
+    },
+    {
+      "id": 104,
+      "name": "Lusine",
+      "position": "Graphic Designer",
+      "salary": 880000
+    },
+    {
+      "id": 105,
+      "name": "Arman",
+      "position": "Junior Developer",
+      "salary": 300000
+    }
+  ]
+}
