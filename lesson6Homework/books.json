@@ -1,0 +1,52 @@
+{
+  "books": [
+    {
+      "id": 101,
+      "title": "Psychology",
+      "price": 30,
+      "photo": "https://static.yakaboo.ua/media/cloudflare/product/webp/352x340/9/7/9780241566237.jpg"
+    },
+    {
+      "id": 102,
+      "title": "Phisics",
+      "price": 12,
+      "photo": "https://images.booksense.com/images/551/458/9781465458551.jpg"
+    },
+    {
+      "id": 103,
+      "title": "Poetry",
+      "price": 20,
+      "photo": "https://static.yakaboo.ua/media/cloudflare/product/webp/352x340/9/7/9780241566237.jpg"
+    },
+    {
+      "id": 104,
+      "title": "Biology",
+      "price": 25,
+      "photo": "https://cdn.gramedia.com/uploads/items/THE_BIOLOGY_BOOK.jpg"
+    },
+    {
+      "id": 105,
+      "title": "Religions",
+      "price": 34,
+      "photo": "https://images.booksense.com/images/433/408/9781465408433.jpg"
+    },
+    {
+      "id": 106,
+      "title": "Poetry Part2",
+      "price": 40,
+      "photo": "https://static.yakaboo.ua/media/cloudflare/product/webp/352x340/9/7/9780241566237.jpg"
+    },
+    {
+      "id": 107,
+      "title": "Biology Part2",
+      "price": 50,
+      "photo": "https://cdn.gramedia.com/uploads/items/THE_BIOLOGY_BOOK.jpg"
+    },
+    {
+      "id": 108,
+      "title": "Religions Part2Ֆ",
+      "price": 40,
+      "photo": "https://images.booksense.com/images/433/408/9781465408433.jpg"
+    }
+  ]
+}
