@@ -1,0 +1,29 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.formWrapper label {
+  margin-top: 10px;
+}
+
+.formWrapper input {
+  padding: 5px;
+  height: 25px;
+  border: 1px solid;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.formWrapper button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.formWrapper button:hover {
+  background-color: #45a049;
+}
