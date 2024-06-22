@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "b3af",
+      "name": "Lilit",
+      "surname": "Marjinyan",
+      "salary": 1000000
+    },
+    {
+      "id": "c62e",
+      "name": "Armen",
+      "surname": "Marjinyan",
+      "salary": 50000000
+    }
+  ]
+}
