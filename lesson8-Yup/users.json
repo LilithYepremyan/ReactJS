@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "f579",
+      "name": "Lilit",
+      "surname": "Yepremyan",
+      "salary": 980000
+    },
+    {
+      "id": "4e26",
+      "salary": 70000000,
+      "surname": "Yepremyan",
+      "name": "Lilit"
+    },
+    {
+      "id": "957f",
+      "salary": 10000,
+      "surname": "Yepremyan",
+      "name": "Lilit"
+    }
+  ]
+}
