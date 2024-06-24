@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 64px;
+  width: 100%;
+  align-items: center   ;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header-addItem {
+  all: unset;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(130,196,130);
+  transition: background-color 0.3s;
+}
+
+.header-addItem:hover {
+  cursor: pointer;
+  background-color: rgb(83,139,83);
+}
