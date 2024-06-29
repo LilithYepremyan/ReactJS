@@ -14,3 +14,7 @@ export const addToDo = async (obj: InputToDo): Promise<ITodo> => {
   const response = await axios.post(URL, obj);
   return response.data;
 };
+
+export const deleteToDo = async (id:number): Promise<void> => {
+  await axios.delete(`${URL}/${id}`);
+};
