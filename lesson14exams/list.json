@@ -1,0 +1,76 @@
+{
+    "events": [
+        {
+            "id": 101,
+            "title": "Anoush",
+            "date": "July 2",
+            "time": "19:00",
+            "type": "opera",
+            "composer": "A. Tigranian",
+            "cover": "https://ticket.opera.am/uploads/images/5d34a043044cc714745c06a201800386.jpg"
+        },
+        {
+            "id": 102,
+            "title": "Swan Lake",
+            "date": "July 4",
+            "time": "19:00",
+            "type": "ballet",
+            "composer": "P. Tchaykovsky",
+            "cover": "https://ticket.opera.am/uploads/images/Swan-Lake-Afisha-1494x1920px-min.jpg"
+        },
+        {
+            "id": 103,
+            "title": "Masquerade",
+            "date": "July 6",
+            "time": "19:00",
+            "type": "ballet",
+            "composer": "A. Khachaturian",
+            "cover": "https://ticket.opera.am/uploads/images/f0149c96e52c9bacf0dc54a7c3077cc6.jpg"
+        },
+        {
+            "id": 104,
+            "title": "Romeo and Juliet",
+            "date": "July 8",
+            "time": "19:00",
+            "type": "ballet",
+            "composer": "S. Prokofiev",
+            "cover": "https://ticket.opera.am/uploads/images/247dca099bf27247210473fa2ae41ab7.jpg"
+        },
+        {
+            "id": 105,
+            "title": "Traviata",
+            "date": "July 9",
+            "time": "19:00",
+            "type": "opera",
+            "composer": "G. Verdi",
+            "cover": "https://ticket.opera.am/uploads/images/3f96f76756b39ad97bcf173b0095f782.jpg"
+        },
+        {
+            "id": 106,
+            "title": "La Boheme",
+            "date": "July 11",
+            "time": "19:00",
+            "type": "opera",
+            "composer": "G. Puccini",
+            "cover": "https://ticket.opera.am/uploads/images/bf31a75e1dafa846fc03dd5a87945d2a.png"
+        },
+        {
+            "id": 107,
+            "title": "La Boheme",
+            "date": "July 12",
+            "time": "19:00",
+            "type": "opera",
+            "composer": "G. Puccini",
+            "cover": "https://ticket.opera.am/uploads/images/bf31a75e1dafa846fc03dd5a87945d2a.png"
+        },
+        {
+            "id": 108,
+            "title": "Turandot",
+            "date": "July 15 ",
+            "time": "19:00",
+            "type": "opera",
+            "composer": "G. Puccini",
+            "cover": "https://ticket.opera.am/uploads/images/Turandot__1494x1920_Updated-min-min%20(1).jpeg"
+        }
+    ]
+}
