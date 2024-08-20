@@ -1,0 +1,131 @@
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fbc2eb;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(251, 194, 235, 1),
+    rgba(166, 193, 238, 1)
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(251, 194, 235, 1),
+    rgba(166, 193, 238, 1)
+  );
+}
+
+* {
+  font-family: sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: black;
+  padding: 20px;
+}
+nav a,
+nav button {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  border: none;
+  background-color: transparent;
+}
+nav a:hover,
+nav button:hover,
+nav a.active {
+  background-color: rgb(186, 157, 243);
+}
+
+.changeBtn {
+  border: 1px solid rgb(186, 157, 243);
+  border-radius: 8px;
+  padding: 5px 20px;
+  background-color: rgb(186, 157, 243);
+  color: white;
+}
+
+.changeBtn:hover {
+  background-color: rgb(167, 127, 246);
+}
+
+.box {
+  width: 100%;
+  background-color: rgba(181, 181, 181, 0.325);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+/* Gallery.css */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.card-likes img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.card-likes span {
+  font-size: 16px;
+}
+
+.card-button {
+  margin-top: 8px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+.upload-button,
+.gallery {
+  margin-top: 20px;
+}
