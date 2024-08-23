@@ -1,0 +1,129 @@
+body,
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fbc2eb;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(251, 194, 235, 1),
+    rgba(166, 193, 238, 1)
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(251, 194, 235, 1),
+    rgba(166, 193, 238, 1)
+  );
+}
+* {
+  font-family: sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: black;
+  padding: 20px;
+}
+nav a,
+nav button {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  border: none;
+  background-color: transparent;
+}
+nav a:hover,
+nav button:hover,
+nav a.active {
+  background-color: rgb(186, 157, 243);
+}
+
+.icon {
+  width: 50px;
+}
+
+.content {
+  margin: 2rem;
+  padding: 1.5rem;
+  background: white;
+}
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  transition: 1s;
+}
+.profile-pic:hover {
+  filter: grayscale(0);
+}
+.profile-pic + p {
+  font-weight: bold;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.list {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.list img:not(.small-icon) {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.list p {
+  color: black;
+  font-size: smaller;
+}
+.small-icon {
+  width: 25px;
+  height: 25px;
+}
+.break {
+  margin-top: 20px;
+}
+.post{
+  position:relative;
+  width:200px;
+  height: 200px;
+}
+.post img{
+  position: absolute;
+}
+.cover{
+  position: absolute;
+  background:black;
+  opacity: 0.8;
+  width:100%;
+  height: 0%;
+  transition: 1s;
+  cursor: pointer;
+}
+.post:hover .cover{
+  height: 100%;
+}
+.like-button{
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  width: 40px!important;
+  height: 40px!important;
+  transition: 1.5s;
+  cursor: pointer;
+}
+.post:hover .like-button{
+  opacity: 1;
+  transform:rotate(30deg);
+}
