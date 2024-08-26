@@ -120,8 +120,8 @@ export const handlePostById = async (id: number): Promise<IResponse> => {
 
 export const handleAddComment = async (
   id: number,
-  comment: string
+  text: string
 ): Promise<IResponse> => {
-  const response = await Axios.post("/posts/comment/" + id, { comment });
+  const response = await Axios.post("/posts/comment/" + id, { text });
   return response.data;
 };
