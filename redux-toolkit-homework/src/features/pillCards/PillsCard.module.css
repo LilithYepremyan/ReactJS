@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container {
+  width: 300px;
+  height: 200px;
+  background-color: whitesmoke;
+  margin: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.image {
+  width: 150px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 16px;
+}
