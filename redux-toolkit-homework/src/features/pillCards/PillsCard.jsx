@@ -1,12 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import style from "./PillsCard.module.css";
 import RatingStars from "../RatingStars/RatingStars";
-import { findPill } from "./PillsCard.slice";
+import { changeRating, findPill } from "./PillsCard.slice";
 
 const PillCard = () => {
   const pills = useSelector((state) => state.pills);
   const dispatch = useDispatch();
-  console.log(pills);
+
+  const handleRatingChange = (id, newRating) => {
+    dispatch(changeRating({ id: id, rating: newRating }));
+  };
 
   return (
     <>
@@ -25,7 +28,13 @@ const PillCard = () => {
               <img className={style.image} src={pill.image} alt={pill.name} />
               <div>
                 <span>{pill.name}</span>
-                <RatingStars />
+                <RatingStars
+                  rating={pill.rating}
+                  totalStars={5}
+                  onRatingChange={(newRating) =>
+                    handleRatingChange(pill.id, newRating)
+                  }
+                />
               </div>
             </div>
           ))

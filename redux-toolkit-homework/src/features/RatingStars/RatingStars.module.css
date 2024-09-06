@@ -5,7 +5,3 @@
   gap: 8px;
   cursor: pointer;
 }
-
-.ratingStars:hover{
-  color: red;
-}

@@ -3,23 +3,25 @@ import RatingStarIcon from "../ratingStarIcon/RatingStarIcon";
 import style from "./RatingStars.module.css";
 
 // eslint-disable-next-line react/prop-types
-const RatingStars = ({ totalStars = 5 }) => {
+const RatingStars = ({ totalStars = 5, rating, onRatingChange }) => {
   const [hoveredStars, setHoveredStars] = useState(0);
+  const [currentRating, setCurrentRating] = useState(rating);
 
   const handleMouseEnter = (index) => {
     setHoveredStars(index + 1);
-
-    console.log("hover ", index);
   };
 
   const handleMouseLeave = () => {
     setHoveredStars(0);
-    console.log("leave");
   };
 
-  const handleClick = () => {
-    console.log("click");
+  const handleClick = (index) => {
+    const newRating = index + 1;
+    setCurrentRating(newRating);
+    onRatingChange(newRating);
   };
+
+  const starsToShow = hoveredStars || currentRating;
 
   return (
     <div className={style.ratingStars}>
@@ -28,9 +30,9 @@ const RatingStars = ({ totalStars = 5 }) => {
           key={index}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
-          onClick={handleClick}
+          onClick={() => handleClick(index)}
         >
-          <RatingStarIcon isFill={false} />
+          <RatingStarIcon isFill={index < starsToShow} />
         </div>
       ))}
     </div>
