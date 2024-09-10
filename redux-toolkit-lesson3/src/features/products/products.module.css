@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.list > div {
+  background: whitesmoke;
+  padding: 20px;
+}
+
+.list img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
