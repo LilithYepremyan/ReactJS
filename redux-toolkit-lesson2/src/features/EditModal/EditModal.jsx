@@ -19,7 +19,6 @@ const modalStyles = {
   p: 4,
 };
 
-// eslint-disable-next-line react/prop-types
 const EditModal = ({
   open,
   onClose,

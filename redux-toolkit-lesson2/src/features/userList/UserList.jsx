@@ -27,31 +27,51 @@ const UserList = () => {
     id: { name: "", value: "" },
     name: { title: "", first: "", last: "" },
   });
-  const [open, setOpen] = useState(false);
+  const [addUser, setAddUser] = useState({
+    id: { name: "", value: "" },
+    name: { title: "", first: "", last: "" },
+  });
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
-  const handleOpen = (user) => {
+  const handleOpenEditModal = (user) => {
     setSelectedUser(user);
-    setOpen(true);
+    setIsEditModalOpen(true);
   };
 
-  const handleClose = () => setOpen(false);
+  const handleOpenAddModal = (user) => {
+    setIsAddModalOpen(true);
+    setAddUser(user);
+  };
 
-  const handleInputChange = (field, value) => {
+  const handleClose = () => setIsEditModalOpen(false);
+
+  const handleEditInputChange = (field, value) => {
     setSelectedUser((prev) => ({
       ...prev,
       [field]: { ...prev[field], ...value },
     }));
   };
 
-  const handleSave = () => {
+  const handleAddInputChange = (field, value) => {
+    setAddUser((prev) => ({
+      ...prev,
+      [field]: { ...prev[field], ...value },
+    }));
+  };
+  const handleSaveUpdate = () => {
     dispatch(updateUser(selectedUser));
     handleClose();
   };
 
-  const handleAddUser = (user) => {
-    dispatch(addNewUser(user));
+  const handleAddUser = (selectedUser) => {
+    dispatch(addNewUser(selectedUser));
 
     handleClose();
+  };
+
+  const handleAddClose = () => {
+    setIsAddModalOpen(false);
   };
 
   return (
@@ -59,7 +79,7 @@ const UserList = () => {
       <h1>User List</h1>
       {loader && <img src="https://i.gifer.com/ZKZg.gif" alt="Loading" />}
 
-      <button onClick={() => handleAddUser(selectedUser)}>Add User</button>
+      <button onClick={() => handleOpenAddModal(addUser)}>Add User</button>
 
       <table className={style.table}>
         <thead>
@@ -81,7 +101,7 @@ const UserList = () => {
               <td>{el.name?.first}</td>
               <td>{el.name?.last}</td>
               <td>
-                <button onClick={() => handleOpen(el)}>Edit</button>
+                <button onClick={() => handleOpenEditModal(el)}>Edit</button>
                 <button onClick={() => dispatch(deleteUser(el.id.name))}>
                   Delete
                 </button>
@@ -91,17 +111,19 @@ const UserList = () => {
         </tbody>
       </table>
       <AddModal
-        open={open}
-        handleClose={handleClose}
+        open={isAddModalOpen}
+        handleAddClose={handleAddClose}
         onAddUser={handleAddUser}
+        addUser={addUser}
+        handleAddInputChange={handleAddInputChange}
       ></AddModal>
 
       <EditModal
-        open={open}
+        open={isEditModalOpen}
         handleClose={handleClose}
         selectedUser={selectedUser}
-        onSave={handleSave}
-        handleInputChange={handleInputChange}
+        onSave={handleSaveUpdate}
+        handleInputChange={handleEditInputChange}
       />
     </div>
   );

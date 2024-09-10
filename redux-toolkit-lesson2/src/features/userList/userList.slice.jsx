@@ -22,7 +22,6 @@ const UserSlice = createSlice({
   },
   reducers: {
     fullfiled: (state, action) => {
-      console.log("ok", action);
       state.users = action.payload.results;
     },
     deleteUser: (state, action) => {
@@ -41,22 +40,19 @@ const UserSlice = createSlice({
         state.users[index] = updatedUser;
       }
     },
-    addNewUser:(state, action)=>{
+    addNewUser: (state, action) => {
       const newUser = action.payload;
-      state.users.push(newUser);  
-    }
+      state.users.unshift(newUser);
+    },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getAllUsers.pending, (state, action) => {
-        // console.log("pending");
+      .addCase(getAllUsers.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(getAllUsers.fulfilled, (state, action) => {
-        // console.log("fulfilled", action);
         state.users = action.payload.results;
         state.isLoading = false;
-        console.log("state userss", state.users);
       })
       .addCase(getAllUsers.rejected, () => {
         console.log("Error");
