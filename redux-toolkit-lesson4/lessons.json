@@ -1,0 +1,53 @@
+{
+  "lessons": [
+    {
+      "id": "101",
+      "title": "Introduction to JavaScript",
+      "ratings": [
+        {
+          "id": "1001",
+          "student": "101",
+          "rate": "8"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "title": "Program Structure Part 1",
+      "ratings": [
+        {
+          "id": "1004",
+          "student": "103",
+          "rate": "10"
+        }
+      ]
+    },
+    {
+      "id": "4e4b",
+      "title": "Loops",
+      "ratings": []
+    },
+    {
+      "id": "2fb6",
+      "title": "Asynchronus",
+      "ratings": []
+    }
+  ],
+  "students": [
+    {
+      "id": "101",
+      "name": "Tigran",
+      "surname": "Harutyunyan"
+    },
+    {
+      "id": "102",
+      "name": "Anna",
+      "surname": "Melqonyan"
+    },
+    {
+      "id": "103",
+      "name": "Lusine",
+      "surname": "Sahakyan"
+    }
+  ]
+}
