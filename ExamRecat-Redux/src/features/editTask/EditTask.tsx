@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import styles from "./EditTask.module.css"
 import { editTask } from "./editTaskSlice"
 import { useState } from "react"
+import { getAllTasks } from "../tasks/tasksSlice"
 
 const EditTask = () => {
   const { id } = useParams()
@@ -17,10 +18,11 @@ const EditTask = () => {
   const [status, setStatus] = useState(found?.status || "pending")
   const [date, setDate] = useState(found?.date || "")
 
-  const handleSave = () => {
-    console.log(text, status, date, id , "data");
+  const handleSave = async () => {
+    console.log(text, status, date, id, "data")
 
-    dispatch(editTask({ id: Number(id), text, status, date }))
+    await dispatch(editTask({ id: Number(id), text, status, date }))
+    await dispatch(getAllTasks())
     navigate("/")
   }
 
@@ -48,5 +50,3 @@ const EditTask = () => {
 }
 
 export default EditTask
-
-

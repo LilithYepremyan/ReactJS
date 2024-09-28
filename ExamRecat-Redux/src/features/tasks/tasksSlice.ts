@@ -25,7 +25,12 @@ const TasksSlice = createSlice({
         state.tasks = action.payload
       })
       .addCase(editTask.fulfilled, (state, action) => {
-        state.tasks = action.payload
+        state.tasks = state.tasks.map(task => {
+          if (task.id === action.payload.id) {
+            return action.payload
+          }
+          return task
+        })
       })
       .addCase(getAllTasks.rejected, (state, action) => {
         state.error = action.error.message

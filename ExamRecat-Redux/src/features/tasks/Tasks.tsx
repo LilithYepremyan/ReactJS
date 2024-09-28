@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom"
 const Tasks = () => {
   const dispatch = useAppDispatch()
   const tasks = useAppSelector(state => state.tasks)
-  console.log(tasks, "tasks")
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -19,16 +18,19 @@ const Tasks = () => {
   }
 
   return (
-    <div className={styles.container}>
-      {tasks.tasks.map(task => (
-        <div key={task.id} className={styles.box}>
-          <p>{task.text}</p>
-          <p>{task.status}</p>
-          <p>{task.date}</p>
-          <button onClick={() => handleEdit(task.id)}>Edit</button>
-        </div>
-      ))}
-    </div>
+    <>
+      <button onClick={() => navigate("/add")}>Add task</button>
+      <div className={styles.container}>
+        {tasks.tasks.map(task => (
+          <div key={task.id} className={styles.box}>
+            <p>{task.text}</p>
+            <p>{task.status}</p>
+            <p>{task.date}</p>
+            <button onClick={() => handleEdit(task.id)}>Edit</button>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 
