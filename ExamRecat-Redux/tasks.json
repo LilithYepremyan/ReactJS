@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": 101,
+      "text": "add css modules",
+      "status": "in progress",
+      "date": "24/05/2024"
+    },
+    {
+      "id": 102,
+      "text": "fix bug on modal",
+      "status": "completed",
+      "date": "21/05/2024"
+    },
+    {
+      "id": 103,
+      "text": "change styles",
+      "status": "pending",
+      "date": "11/05/2024"
+    },
+    {
+      "id": 104,
+      "text": "Move website responsive",
+      "status": "in progress",
+      "date": "11/11/2024"
+    },
+    {
+      "id": "e8ad",
+      "text": "",
+      "date": "",
+      "status": "pending"
+    }
+  ]
+}
