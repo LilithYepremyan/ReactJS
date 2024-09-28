@@ -7,4 +7,5 @@ export interface ITask {
 
 export interface IState {
   tasks: ITask[]
+  error: null | string
 }

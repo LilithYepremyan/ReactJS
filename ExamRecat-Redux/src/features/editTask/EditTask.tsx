@@ -18,6 +18,8 @@ const EditTask = () => {
   const [date, setDate] = useState(found?.date || "")
 
   const handleSave = () => {
+    console.log(text, status, date, id , "data");
+
     dispatch(editTask({ id: Number(id), text, status, date }))
     navigate("/")
   }
@@ -39,10 +41,12 @@ const EditTask = () => {
           <option value="in progress">In Progress</option>
           <option value="completed">Completed</option>
         </select>
-        <button>Save</button>
+        <button type="submit">Save</button>
       </form>
     </div>
   )
 }
 
 export default EditTask
+
+

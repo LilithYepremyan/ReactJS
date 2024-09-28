@@ -13,9 +13,10 @@ const AddTask = () => {
   const [status, setStatus] = useState("pending")
 
   const handleAddTask = () => {
-    dispatch(addTask({ text, date, status: "pending" })).unwrap()
+    dispatch(addTask({id: Date.now(), text, date, status: "pending" })).unwrap()
     navigate("/")
   }
+
 
   const handleCreatedDate = () => {
     const newDate = Date.now()
