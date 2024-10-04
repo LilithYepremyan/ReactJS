@@ -2,9 +2,8 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { useNavigate, useParams } from "react-router-dom"
 
 import styles from "./EditTask.module.css"
-import { editTask } from "./editTaskSlice"
 import { useState } from "react"
-import { getAllTasks } from "../tasks/tasksSlice"
+import { deleteTask, editTask } from "../tasks/tasksSlice"
 
 const EditTask = () => {
   const { id } = useParams()
@@ -12,17 +11,19 @@ const EditTask = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
-  const found = tasks.find(task => task.id === Number(id))
+  const found = tasks.find(task => task.id === id)
 
   const [text, setText] = useState(found?.text || "")
   const [status, setStatus] = useState(found?.status || "pending")
   const [date, setDate] = useState(found?.date || "")
 
   const handleSave = async () => {
-    console.log(text, status, date, id, "data")
+    dispatch(editTask({ id, text, status, date }))
+    navigate("/")
+  }
 
-    await dispatch(editTask({ id: Number(id), text, status, date }))
-    await dispatch(getAllTasks())
+  const handleDelete = async () => {
+    dispatch(deleteTask({ id }))
     navigate("/")
   }
 
@@ -43,7 +44,8 @@ const EditTask = () => {
           <option value="in progress">In Progress</option>
           <option value="completed">Completed</option>
         </select>
-        <button type="submit">Save</button>
+        <button>Save</button>
+        <button onClick={handleDelete}>Delete Task</button>
       </form>
     </div>
   )

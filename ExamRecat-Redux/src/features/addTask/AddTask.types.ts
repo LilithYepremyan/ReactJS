@@ -1,12 +1,12 @@
 export interface AddTask {
-  id: number
+  id: string
   text: string
   status: string
   date: string
 }
 
 export interface InputTask {
-    id: number
+    id: string
   text: string
   date: string
   status: string

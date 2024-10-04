@@ -1,39 +1,33 @@
 {
   "tasks": [
     {
-      "id": 101,
-      "text": "add css modules",
+      "id": "101",
+      "text": "add css modulesasa",
       "status": "in progress",
       "date": "24/05/2024"
     },
     {
-      "id": 102,
-      "text": "fix bug on modal",
+      "id": "102",
+      "text": "fix bug on modal1111",
       "status": "completed",
       "date": "21/05/2024"
     },
     {
-      "id": 103,
-      "text": "change styles",
+      "id": "1727534317093",
+      "text": "սդսդդսդս",
       "status": "pending",
-      "date": "11/05/2024"
+      "date": ""
     },
     {
-      "id": 104,
-      "text": "Move website responsive",
-      "status": "in progress",
-      "date": "11/11/2024"
-    },
-    {
-      "id": 1727534317093,
-      "text": "go to work",
+      "id": "1727535991802",
+      "text": "xhgSZxSxs",
       "date": "",
       "status": "pending"
     },
     {
-      "id": 1727535991802,
-      "text": "xhgSZxSxs",
-      "date": "",
+      "id": "1728045194684",
+      "text": "1212121212",
+      "date": "2024-10-04",
       "status": "pending"
     }
   ]
