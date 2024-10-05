@@ -1,0 +1,142 @@
+{
+  "books": [
+    {
+      "id": "101",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "photo": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28828_p_v8_ao.jpg",
+      "rating": 3,
+      "comments": [
+        {
+          "id": 1,
+          "userId": 1,
+          "comment": "Greate book!"
+        },
+        {
+          "id": 2,
+          "userId": 1,
+          "comment": "Nice book!"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "photo": "https://images.penguinrandomhouse.com/cover/9780060935467",
+      "rating": 5,
+      "comments": [
+        {
+          "id": 1,
+          "userId": 1,
+          "comment": "Greate book!"
+        },
+        {
+          "id": 2,
+          "userId": 1,
+          "comment": "Nice book!"
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "title": "1984",
+      "author": "George Orwell",
+      "photo": "https://m.media-amazon.com/images/I/61NAx5pd6XL._AC_UF1000,1000_QL80_.jpg",
+      "rating": 4
+    },
+    {
+      "id": "104",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "photo": "https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg",
+      "rating": 4,
+      "comments": [
+        {
+          "id": 1,
+          "userId": 1,
+          "comment": "Greate book!"
+        },
+        {
+          "id": 2,
+          "userId": 1,
+          "comment": "Nice book!"
+        }
+      ]
+    },
+    {
+      "id": "105",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "photo": "https://m.media-amazon.com/images/I/71Q1tPupKjL.jpg",
+      "rating": 5,
+      "comments": [
+        {
+          "id": 1,
+          "userId": 1,
+          "comment": "Greate book!"
+        },
+        {
+          "id": 2,
+          "userId": 1,
+          "comment": "Nice book!"
+        }
+      ]
+    },
+    {
+      "id": "106",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "photo": "https://m.media-amazon.com/images/I/61PBBKyZ1rL._AC_UF1000,1000_QL80_.jpg",
+      "rating": 2
+    },
+    {
+      "id": 1728133884560,
+      "title": "",
+      "author": "",
+      "photo": "",
+      "rating": 0
+    },
+    {
+      "id": 1728134128271,
+      "title": "a",
+      "author": "s",
+      "photo": "",
+      "rating": 0
+    },
+    {
+      "id": 1728134268872,
+      "title": "sdsfsdf",
+      "author": "fsdfsd",
+      "photo": "dsfsfs",
+      "rating": 0
+    },
+    {
+      "id": 1728134298969,
+      "title": "dsfd",
+      "author": "fdfddd",
+      "photo": "dffdfdf",
+      "rating": 0
+    },
+    {
+      "id": 101,
+      "comment": "sadda",
+      "rate": 0
+    },
+    {
+      "id": 101,
+      "comment": "sadda",
+      "rate": 0
+    },
+    {
+      "id": 101,
+      "comment": "sadda",
+      "rate": 3
+    },
+    {
+      "id": 101,
+      "comment": "dscsdf",
+      "rate": 0
+    }
+  ]
+}

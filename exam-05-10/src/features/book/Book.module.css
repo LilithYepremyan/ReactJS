@@ -1,0 +1,25 @@
+.image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .book {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3;
+    cursor: pointer;
+    margin: 10px;
+  
+  }
+  
