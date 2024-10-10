@@ -3,7 +3,13 @@ import styles from "./AddComment.module.css"
 import { useForm } from "react-hook-form"
 import { useNavigate, useParams } from "react-router-dom"
 import { useAppDispatch } from "../../app/hooks"
-import { addRate } from "../books/booksSlice"
+import { updateBookRatingAndComment } from "../books/booksSlice"
+
+type FormData = {
+  comment: string
+  email: string
+  rate: number
+}
 
 const AddComment = () => {
   const [comment, setComment] = useState("")
@@ -12,26 +18,63 @@ const AddComment = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
-//   const handleAddComment = () => {
-//     dispatch(addRate({ id: Number(id), comment, rate })).unwrap()
-//     // navigate("/books")
-//   }
-  const { register, handleSubmit } = useForm({})
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>()
+
+  const handleAddCommentAndRating = (data: FormData) => {
+    console.log(data, "data")
+    dispatch(
+      updateBookRatingAndComment({
+        id: Number(id),
+        comment: data.comment,
+        rate: +data.rate,
+        email: data.email,
+      }),
+    )
+
+    reset()
+    navigate("/books")
+  }
 
   return (
     <div className={styles.formBlock}>
-      AddComment
-      <form onSubmit={handleSubmit(handleAddComment)}>
+      <h2>Add Comment</h2>
+      <form onSubmit={handleSubmit(handleAddCommentAndRating)}>
+        {errors.email && (
+          <span style={{ color: "red" }}>{errors.email.message}</span>
+        )}
         <input
-          {...register("comment")}
+          type="email"
+          placeholder="Add Email"
+          {...register("email", {
+            required: "Email is required",
+            pattern: {
+              value: /^\S+@\S+$/i,
+              message: "Invalid email address",
+            },
+          })}
+        />
+
+        {errors.comment && (
+          <span style={{ color: "red" }}>Comment is required</span>
+        )}
+        <input
+          {...register("comment", { required: true })}
           placeholder="Add Comment"
           value={comment}
           onChange={e => setComment(e.target.value)}
-        ></input>
+        />
+
         <span>Add Rate</span>
+        {errors.rate && (
+          <span style={{ color: "red" }}>Please select a rating</span>
+        )}
         <select
-          name="rating"
-          id=""
+          {...register("rate", { required: true })}
           value={rate}
           onChange={e => setRate(Number(e.target.value))}
         >
@@ -41,7 +84,8 @@ const AddComment = () => {
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <button type="submit">Add</button>
+
+        <button type="submit">Add Comment</button>
       </form>
     </div>
   )

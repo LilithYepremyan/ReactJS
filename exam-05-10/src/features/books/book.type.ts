@@ -3,7 +3,7 @@ export interface IBook {
   title: string
   author: string
   photo: string
-  rating: number
+  totalRating: number
   comments?: IComment[]
 }
 
@@ -13,6 +13,7 @@ export interface IState {
 
 export interface IComment {
   id: number
-  userId: number
   comment: string
+  rate: number
+  email: string
 }

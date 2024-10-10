@@ -1,12 +1,66 @@
+/* AddComment.module.css */
+
 .formBlock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  background-color: #f9f9f9;
   padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+}
+
+.formBlock h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #7f4bc9;
+  outline: none;
+  box-shadow: 0 0 5px rgba(127, 75, 201, 0.2);
+}
+
+span {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #7f4bc9;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6d3fb3;
 }

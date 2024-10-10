@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import type { IRate } from "./Rating.types"
 import { useAppDispatch } from "../../app/hooks"
-import { updateRate } from "../books/booksSlice"
 
 const Rating: React.FC<IRate> = ({ id, rate }) => {
   const filled =
@@ -12,13 +11,14 @@ const Rating: React.FC<IRate> = ({ id, rate }) => {
   const [rating, setRating] = useState<number[]>([0, 0, 0, 0, 0])
   const dispatch = useAppDispatch()
 
-  const showTemporalRate = (value: number) => {
-    const temp = [...rating]
-    temp.fill(1, 0, value)
-    temp.fill(0, value)
+  // const showTemporalRate = (value: number) => {
+  //   const temp = [...rating]
+  //   temp.fill(1, 0, value)
+  //   temp.fill(0, value)
 
-    setRating(temp)
-  }
+  //   setRating(temp)
+  // }
+
 
   const loadRate = () => {
     const temp = [...rating]
@@ -41,9 +41,9 @@ const Rating: React.FC<IRate> = ({ id, rate }) => {
             style={{ width: 25, height: 25 }}
             alt="img"
             src={star === 0 ? empty : filled}
-            onMouseLeave={loadRate}
-            onMouseEnter={() => showTemporalRate(i + 1)}
-            onClick={() => dispatch(updateRate({ id, rate: i + 1 }))}
+            // onMouseLeave={loadRate}
+            // onMouseEnter={() => showTemporalRate(i + 1)}
+            // onClick={() =>{}}
           />
         ))}
     </div>

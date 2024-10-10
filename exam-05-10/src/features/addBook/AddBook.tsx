@@ -26,7 +26,8 @@ const AddBook = () => {
         title,
         author,
         photo,
-        rating: 0,
+        totalRating: 0,
+        comments: [],
       }),
     ).unwrap()
     navigate("/books")

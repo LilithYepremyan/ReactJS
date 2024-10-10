@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { getAllBooks } from "./booksSlice"
+import { getAllBooks, updateBookRatingAndComment } from "./booksSlice"
 import styles from "./Books.module.css"
 import { Link } from "react-router-dom"
 import Rating from "../rating/Rating"
@@ -8,11 +8,11 @@ import Rating from "../rating/Rating"
 const Books = () => {
   const dispatch = useAppDispatch()
   const books = useAppSelector(state => state.books)
-  console.log(books, "books")
+  console.log(books.books, "books")
 
   useEffect(() => {
     dispatch(getAllBooks())
-  }, [])
+  }, [dispatch])
 
   return (
     <div className={styles.container}>
@@ -21,7 +21,9 @@ const Books = () => {
           <h3>{book.title}</h3>
           <p>{book.author}</p>
           <img className={styles.image} src={book.photo} alt={book.title} />
-          <div>Rating: {<Rating id={Number(book.id)} rate={book.rating} />}</div>
+          <div>
+            Rating: {<Rating id={Number(book.id)} rate={book.totalRating} />}
+          </div>
 
           <Link to={`/details/${book.id}`}>Details</Link>
         </div>
