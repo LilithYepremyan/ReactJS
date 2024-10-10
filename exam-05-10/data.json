@@ -44,6 +44,14 @@
           "rate": 1
         }
       ]
+    },
+    {
+      "id": 1728565849060,
+      "title": "1984",
+      "author": "George Orwell",
+      "photo": "https://anylang.net/sites/default/files/styles/book_image/public/covers/1984.jpg?itok=IVpqqKj5",
+      "totalRating": 0,
+      "comments": []
     }
   ]
 }

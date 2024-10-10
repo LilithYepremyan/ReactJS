@@ -22,11 +22,9 @@ export const addBook = createAsyncThunk(
 export const updateBookRatingAndComment = createAsyncThunk(
   "books/addCommentToBook",
   async ({ id, comment, rate, email }: IComment) => {
-    // Fetch the current book data
     const bookResponse = await axios.get(`http://localhost:3004/books/${id}`)
     const book = bookResponse.data
 
-    // Add the new comment
     const newComment: IComment = {
       id,
       email,
@@ -34,10 +32,8 @@ export const updateBookRatingAndComment = createAsyncThunk(
       rate,
     }
 
-    // Add the new comment to the existing comments
     const updatedComments = [...book.comments, newComment]
 
-    // Update the total rating
     const totalRating = updatedComments.reduce(
       (acc: number, comment: IComment) => acc + comment.rate,
       0,
@@ -46,7 +42,6 @@ export const updateBookRatingAndComment = createAsyncThunk(
       ? totalRating / updatedComments.length
       : 0
 
-    // Send the updated data to the server
     const response = await axios.patch(`http://localhost:3004/books/${id}`, {
       comments: updatedComments,
       totalRating: averageRating,
