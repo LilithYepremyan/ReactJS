@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "brand": "Apple",
+      "price": 99.99,
+      "rating": 4.5,
+      "imageUrl": "https://m.media-amazon.com/images/I/61RahTQtAqL.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "brand": "Apple",
+      "price": 49.99,
+      "rating": 4.0,
+      "imageUrl": "https://www.boat-lifestyle.com/cdn/shop/files/Stone_SpinXPro_1.png?v=1709717404"
+    },
+    {
+      "id": 3,
+      "name": "Running Shoes",
+      "category": "Footwear",
+      "brand": "Balmain",
+      "price": 59.99,
+      "rating": 4.2,
+      "imageUrl": "https://static.nike.com/a/images/t_default/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png"
+    },
+    {
+      "id": 4,
+      "name": "Smartphone",
+      "category": "Electronics",
+      "brand": "Samsung",
+      "price": 180.99,
+      "rating": 4.8,
+      "imageUrl": "https://notebookcentre.am/wa-data/public/shop/products/44/68/6844/images/13735/13735.970.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Jacket",
+      "category": "Clothing",
+      "brand": "Nike",
+      "price": 199.99,
+      "rating": 4.7,
+      "imageUrl": "https://evolveskatestore.com/cdn/shop/files/image_55_-Photoroom.png-Photoroom_600x.png?v=1717207119"
+    },
+    {
+      "id": 6,
+      "name": "Jacket",
+      "category": "Clothing",
+      "brand": "Nike",
+      "price": 200,
+      "rating": 4.9,
+      "imageUrl": "https://owp.klarna.com/product/640x640/3003970376/Nike-Miler-Repel-Running-Jacket-Men-s-Black.jpg?ph=true"
+    },
+    {
+      "id": 7,
+      "name": "Sweatshirt",
+      "category": "Clothing",
+      "brand": "Adidas",
+      "price": 36,
+      "rating": 4.8,
+      "imageUrl": "https://static.nike.com/a/images/t_default/c5eb8f68-8e7e-4827-894c-228818b22b42/M+NK+SWOOSH+TENNIS+CREW.png"
+    }
+  ]
+}

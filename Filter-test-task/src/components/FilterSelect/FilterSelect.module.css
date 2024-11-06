@@ -1,0 +1,27 @@
+.filterGroup {
+    margin-bottom: 16px;
+  }
+  
+  .filterGroup label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+  
+  .select:focus {
+    border-color: #888;
+    outline: none;
+  }
+  
