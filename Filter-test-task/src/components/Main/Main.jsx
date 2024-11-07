@@ -61,7 +61,7 @@ const Main = () => {
     setFilters((prev) => ({ ...prev, [key]: value }));
   };
   const LoadingSpinner = () => (
-    <div className={styles.spinner}>
+    <div data-testId="spinner" className={styles.spinner}>
       <ClipLoader size={50} color="#4A90E2" />
     </div>
   );
