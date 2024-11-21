@@ -1,0 +1,102 @@
+[
+  {
+    "id": 0,
+    "imageUrl": "/src/assets/pizza1.jpg",
+    "title": "Пеперони",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 800,
+    "category": 0,
+    "rating": 4.5
+  },
+  {
+    "id": 1,
+    "imageUrl": "/src/assets/pizza2.jpg",
+    "title": "Четыре сыра",
+    "types": [0],
+    "sizes": [25, 30],
+    "price": 750,
+    "category": 1,
+    "rating": 4.2
+  },
+  {
+    "id": 2,
+    "imageUrl": "/src/assets/pizza3.jpg",
+    "title": "Маргарита",
+    "types": [1],
+    "sizes": [28, 35, 40],
+    "price": 900,
+    "category": 1,
+    "rating": 4.8
+  },
+  {
+    "id": 3,
+    "imageUrl": "/src/assets/pizza4.jpg",
+    "title": "Барбекю",
+    "types": [0, 1],
+    "sizes": [26, 30, 40],
+    "price": 850,
+    "category": 2,
+    "rating": 4.6
+  },
+  {
+    "id": 4,
+    "imageUrl": "/src/assets/pizza5.jpg",
+    "title": "Гавайская",
+    "types": [0],
+    "sizes": [26, 30],
+    "price": 780,
+    "category": 2,
+    "rating": 4.1
+  },
+  {
+    "id": 5,
+    "imageUrl": "/src/assets/pizza6.jpg",
+    "title": "Мясная",
+    "types": [0, 1],
+    "sizes": [26, 35, 40],
+    "price": 920,
+    "category": 0,
+    "rating": 4.7
+  },
+  {
+    "id": 6,
+    "imageUrl": "/src/assets/pizza7.jpg",
+    "title": "Грибная",
+    "types": [1],
+    "sizes": [30, 40],
+    "price": 820,
+    "category": 3,
+    "rating": 4.4
+  },
+  {
+    "id": 7,
+    "imageUrl": "/src/assets/pizza8.jpg",
+    "title": "Морская",
+    "types": [0],
+    "sizes": [26, 30, 35],
+    "price": 950,
+    "category": 3,
+    "rating": 4.9
+  },
+  {
+    "id": 8,
+    "imageUrl": "/src/assets/pizza9.jpg",
+    "title": "Овощная",
+    "types": [1],
+    "sizes": [26, 35],
+    "price": 780,
+    "category": 1,
+    "rating": 4.0
+  },
+  {
+    "id": 9,
+    "imageUrl": "/src/assets/pizza10.jpg",
+    "title": "Острая мексиканская",
+    "types": [0, 1],
+    "sizes": [28, 35, 40],
+    "price": 890,
+    "category": 2,
+    "rating": 4.3
+  }
+]
