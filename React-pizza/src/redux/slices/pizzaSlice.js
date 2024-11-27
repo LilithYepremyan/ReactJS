@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BASE_URL = "https://6466842bba7110b663a2c623.mockapi.io/items";
+export const BASE_URL = "https://670f9c043e7151861658a5ed.mockapi.io/items";
 
 const initialState = {
   items: [],

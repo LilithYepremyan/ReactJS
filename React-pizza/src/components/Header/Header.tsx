@@ -7,7 +7,6 @@ function Header() {
   const { totalCount, totalPrice } = useSelector((state) => state.cartReducer);
   const { pathname } = useLocation();
 
-  console.log(pathname, "location");
 
   return (
     <div className="header">

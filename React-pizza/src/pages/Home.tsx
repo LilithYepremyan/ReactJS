@@ -28,7 +28,6 @@ const Home: React.FC = () => {
     [dispatch]
   );
 
-  console.log(items, "items");
 
   React.useEffect(() => {
     dispatch(
@@ -47,8 +46,6 @@ const Home: React.FC = () => {
   ));
 
   const pizzas = items.map((obj: any) => {
-    console.log(items, "items");
-    console.log(obj, "obj");
 
     return (
       <Link to={`/pizza/${obj.id}`} key={obj.id}>
