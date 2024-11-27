@@ -8,6 +8,7 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
+import FullPizza from "./pages/FullPizza";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "",
         element: <Home />,
       },
+      {
+        path: "pizza/:id",
+        element: <FullPizza />,
+      },
       { path: "*", element: <NotFound /> },
       { path: "cart", element: <Cart /> },
     ],
@@ -25,9 +30,9 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router}></RouterProvider>
-    </Provider>
-  </StrictMode>
+  // <StrictMode>
+  <Provider store={store}>
+    <RouterProvider router={router}></RouterProvider>
+  </Provider>
+  // </StrictMode>
 );

@@ -26,6 +26,8 @@ const PizzaCard = ({
     (state) => state.cartReducer.items.find((obj) => obj.id === id)?.count
   );
 
+  console.log({ id, title, price, imageUrl, sizes, types }, "cartItem");
+
   const addedCount = cartItem ? cartItem : 0;
 
   const [activeType, setActiveType] = useState(0);
@@ -41,12 +43,24 @@ const PizzaCard = ({
       size: activeSize,
     };
     dispatch(addItem(item));
+
+
+    console.log({
+      id,
+      title,
+      price,
+      imageUrl,
+      type: typeNames[activeType],
+      size: sizes[activeSize],
+    } ,"onclickitem");
+    
   };
 
   return (
     <div className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt={title} />
       <h4 className="pizza-block__title">{title}</h4>
+      <h1>{id}</h1>
       <div className="pizza-block__selector">
         <ul>
           {types.map((type) => (

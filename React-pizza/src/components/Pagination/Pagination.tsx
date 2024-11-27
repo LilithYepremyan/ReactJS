@@ -9,7 +9,7 @@ const Pagination = ({ currentPage, onChangePage }: any) => {
         breakLabel="..."
         nextLabel=">"
         onPageChange={(event) => onChangePage(event.selected + 1)}
-        pageRangeDisplayed={8}
+        pageRangeDisplayed={10}
         pageCount={3}
         forcePage={currentPage}
         previousLabel="<"
