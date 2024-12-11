@@ -1,21 +1,23 @@
 import React from "react";
 
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { setCategoryId, setCurrentPage } from "../redux/slices/filterSlice";
 import { fetchPizzas } from "../redux/slices/pizzaSlice";
 import Skeleton from "../components/PizzaCard/Skeleton";
 import PizzaCard from "../components/PizzaCard/PizzaCard";
 import Categories from "../components/Categories/Categories";
-import Sort from "../components/Sort/Sort";
 import Pagination from "../components/Pagination/Pagination";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useAppDispatch } from "../redux/store";
+import SortPopup from "../components/Sort/Sort";
 const Home: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const { items, status } = useSelector((state) => state.pizzaReducer);
   const { categoryId, currentPage, searchValue } = useSelector(
     (state) => state.filterReducer
   );
   const sort = useSelector((state) => state.filterReducer.sort);
+  
   const order = sort.sortProperty.includes("-") ? "asc" : "desc";
   const sortBy = sort.sortProperty.replace("-", "");
   const category = categoryId > 0 ? `category=${categoryId}` : "";
@@ -28,7 +30,6 @@ const Home: React.FC = () => {
     [dispatch]
   );
 
-
   React.useEffect(() => {
     dispatch(
       fetchPizzas({
@@ -38,6 +39,7 @@ const Home: React.FC = () => {
         search,
         currentPage,
       })
+      
     );
     window.scrollTo(0, 0);
   }, [dispatch, order, sortBy, category, search, currentPage]);
@@ -46,18 +48,17 @@ const Home: React.FC = () => {
   ));
 
   const pizzas = items.map((obj: any) => {
-
     return (
-      <Link to={`/pizza/${obj.id}`} key={obj.id}>
-        <PizzaCard {...obj} />
-      </Link>
+      // <Link to={`/pizza/${obj.id}`} key={obj.id}>
+      <PizzaCard key={obj.id} {...obj} />
+      // </Link>
     );
   });
   return (
     <div className="container">
       <div className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-        <Sort />
+        <SortPopup />
       </div>
       <h2 className="content__title">Все пиццы</h2>
       {status === "error" ? (
@@ -77,7 +78,7 @@ const Home: React.FC = () => {
           {status === "loading" ? skeletons : pizzas}
         </div>
       )}
-      <Pagination onChangePage={onChangePage} />
+      <Pagination onChangePage={onChangePage} currentPage={currentPage} />
     </div>
   );
 };

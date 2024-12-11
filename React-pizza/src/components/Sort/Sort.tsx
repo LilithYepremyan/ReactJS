@@ -1,30 +1,34 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setSort } from "../../redux/slices/filterSlice";
+import { setSort, SortPropertyEnum } from "../../redux/slices/filterSlice";
 
-export const list = [
-  { name: "популярности(DESC)", sortProperty: "rating" },
-  { name: "популярности(ASC)", sortProperty: "-rating" },
-  { name: "цене(DESC)", sortProperty: "price" },
-  { name: "цене(ASC)", sortProperty: "-price" },
-  { name: "алфавиту(DESC)", sortProperty: "title" },
-  { name: "алфавиту(ASC)", sortProperty: "-title" },
+type SortItem = {
+  name: string;
+  sortProperty: SortPropertyEnum;
+};
+
+export const list: SortItem[] = [
+  { name: "популярности(DESC)", sortProperty: SortPropertyEnum.RATING_DESC },
+  { name: "популярности(ASC)", sortProperty: SortPropertyEnum.RATING_ASC },
+  { name: "цене(DESC)", sortProperty: SortPropertyEnum.PRICE_DESC },
+  { name: "цене(ASC)", sortProperty: SortPropertyEnum.PRICE_ASC },
+  { name: "алфавиту(DESC)", sortProperty: SortPropertyEnum.TITLE_DESC },
+  { name: "алфавиту(ASC)", sortProperty: SortPropertyEnum.TITLE_ASC },
 ];
-function Sort() {
+function SortPopup() {
   const dispatch = useDispatch();
   const sort = useSelector((state) => state.filterReducer.sort);
-
-  const sortRef = useRef();
+  const sortRef = useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = useState(false);
 
-  const selectOption = (obj) => {
+  const selectOption = (obj: SortItem) => {
     dispatch(setSort(obj));
     setOpen(false);
   };
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
+    const handleClickOutside = (e: React.MouseEvent<HTMLBodyElement>) => {
       if (sortRef.current && !sortRef.current.contains(e.target)) {
         setOpen(false);
       }
@@ -58,7 +62,7 @@ function Sort() {
       {open && (
         <div className="sort__popup">
           <ul>
-            {list.map((obj, i) => (
+            {list.map((obj) => (
               <li
                 onClick={() => selectOption(obj)}
                 key={obj.name}
@@ -76,4 +80,4 @@ function Sort() {
   );
 }
 
-export default Sort;
+export default SortPopup;

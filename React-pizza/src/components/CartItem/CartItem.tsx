@@ -3,13 +3,25 @@ import styles from "./CartItem.module.css";
 import classNames from "classnames";
 import { addItem, minusItem, removeItem } from "../../redux/slices/cartSlice";
 
-const CartItem = ({ id, title, price, imageUrl, count, type }) => {
+import type { CartItem } from "../../redux/slices/cartSlice";
+import StarIcon from "../StarIcon/StarIcon";
+
+const CartItem = ({
+  id,
+  title,
+  price,
+  imageUrl,
+  count,
+  type,
+  rating,
+}: CartItem) => {
   const dispatch = useDispatch();
   const onClickPlus = () => {
-    dispatch(addItem({ id }));
+    dispatch(addItem({ id } as CartItem));
   };
 
   const onClickMinus = () => {
+    if (count === 1) return;
     dispatch(minusItem({ id }));
   };
 
@@ -34,16 +46,29 @@ const CartItem = ({ id, title, price, imageUrl, count, type }) => {
           <p>{type}, 26 см.</p>
         </div>
       </div>
+      <div className={styles.cart__item_rating}>
+        {" "}
+        <StarIcon
+          width={25}
+          height={25}
+          borderColor={"#fe5f1e"}
+          fillPercentage={100}
+        />
+        <p style={{ color: "#fe5f1e" }}>{rating}</p>
+      </div>
+
       <div className={styles.cart__item_count}>
-        <div
+        <button
+          disabled={count === 1}
           className={classNames(
-            "button button--outline button--circle",
-            styles.cart__item_count_minus
+            "button button--outline button--circle button-disabled",
+            styles.cart__item_count_minus,
+            { [styles.button_disabled]: count === 1 }
           )}
           onClick={onClickMinus}
         >
           -
-        </div>
+        </button>
         <div>{count}</div>
         <div
           className={classNames(

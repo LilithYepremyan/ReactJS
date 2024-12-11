@@ -1,3 +1,5 @@
+import { Sort } from "./filterSlice";
+
 export type Pizza = {
   id: string;
   imageUrl: string;
@@ -13,9 +15,10 @@ export interface PizzaSliceState {
   status: string;
 }
 export type SearchPizzaParams = {
-  sortBy: string;
+  sortBy: Sort;
   order: string;
   category: string;
   search: string;
   currentPage: string;
+  // rating: number;
 };

@@ -95,6 +95,26 @@
   background-color: #2a2a2a;
 }
 
+.button_disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: rgb(169, 166, 166);
+  border-color: rgb(169, 166, 166);
+}
+.button_disabled:hover {
+  background-color: transparent;
+  color: rgb(169, 166, 166);
+}
+
+.button_disabled:active {
+  transform: none;
+}
+
 .pizza_block__image {
   width: 100px;
+}
+
+.cart__item_rating{
+  display: flex;
+  gap : 10px;
 }
