@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSort, SortPropertyEnum } from "../../redux/slices/filterSlice";
+import { RootState } from "../../redux/store";
 
 type SortItem = {
   name: string;
@@ -17,7 +18,7 @@ export const list: SortItem[] = [
 ];
 function SortPopup() {
   const dispatch = useDispatch();
-  const sort = useSelector((state) => state.filterReducer.sort);
+  const sort = useSelector((state: RootState) => state.filterReducer.sort);
   const sortRef = useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = useState(false);
@@ -28,8 +29,8 @@ function SortPopup() {
   };
 
   useEffect(() => {
-    const handleClickOutside = (e: React.MouseEvent<HTMLBodyElement>) => {
-      if (sortRef.current && !sortRef.current.contains(e.target)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (sortRef.current && !sortRef.current.contains(e.target as Node)) {
         setOpen(false);
       }
     };

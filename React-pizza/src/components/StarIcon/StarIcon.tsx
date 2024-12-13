@@ -1,4 +1,9 @@
-const StarIcon = ({ fillPercentage, borderColor, width, height }) => {
+type Props = {
+  fillPercentage: number;
+  width: number;
+  height: number;
+};
+const StarIcon = ({ fillPercentage, width, height }: Props) => {
   return (
     <svg
       height={height}

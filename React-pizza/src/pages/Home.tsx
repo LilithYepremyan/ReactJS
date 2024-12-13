@@ -1,23 +1,24 @@
-import React from "react";
+import { FC, useCallback, useEffect } from "react";
 
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { setCategoryId, setCurrentPage } from "../redux/slices/filterSlice";
 import { fetchPizzas } from "../redux/slices/pizzaSlice";
 import Skeleton from "../components/PizzaCard/Skeleton";
 import PizzaCard from "../components/PizzaCard/PizzaCard";
 import Categories from "../components/Categories/Categories";
 import Pagination from "../components/Pagination/Pagination";
-// import { Link } from "react-router-dom";
-import { useAppDispatch } from "../redux/store";
+import { RootState, useAppDispatch } from "../redux/store";
 import SortPopup from "../components/Sort/Sort";
-const Home: React.FC = () => {
+const Home: FC = () => {
   const dispatch = useAppDispatch();
-  const { items, status } = useSelector((state) => state.pizzaReducer);
-  const { categoryId, currentPage, searchValue } = useSelector(
-    (state) => state.filterReducer
+  const { items, status } = useSelector(
+    (state: RootState) => state.pizzaReducer
   );
-  const sort = useSelector((state) => state.filterReducer.sort);
-  
+  const { categoryId, currentPage, searchValue } = useSelector(
+    (state: RootState) => state.filterReducer
+  );
+  const sort = useSelector((state: RootState) => state.filterReducer.sort);
+
   const order = sort.sortProperty.includes("-") ? "asc" : "desc";
   const sortBy = sort.sortProperty.replace("-", "");
   const category = categoryId > 0 ? `category=${categoryId}` : "";
@@ -25,12 +26,12 @@ const Home: React.FC = () => {
   const onChangePage = (page: number) => {
     dispatch(setCurrentPage(page));
   };
-  const onChangeCategory = React.useCallback(
+  const onChangeCategory = useCallback(
     (i: number) => dispatch(setCategoryId(i)),
     [dispatch]
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(
       fetchPizzas({
         sortBy,
@@ -39,20 +40,15 @@ const Home: React.FC = () => {
         search,
         currentPage,
       })
-      
     );
     window.scrollTo(0, 0);
   }, [dispatch, order, sortBy, category, search, currentPage]);
-  const skeletons = [...new Array(6)].map((_, index) => (
+  const skeletons = [...new Array(3)].map((_, index) => (
     <Skeleton key={index} />
   ));
 
   const pizzas = items.map((obj: any) => {
-    return (
-      // <Link to={`/pizza/${obj.id}`} key={obj.id}>
-      <PizzaCard key={obj.id} {...obj} />
-      // </Link>
-    );
+    return <PizzaCard key={obj.id} {...obj} />;
   });
   return (
     <div className="container">

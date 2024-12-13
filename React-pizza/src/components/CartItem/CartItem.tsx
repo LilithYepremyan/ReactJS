@@ -22,7 +22,7 @@ const CartItem = ({
 
   const onClickMinus = () => {
     if (count === 1) return;
-    dispatch(minusItem({ id }));
+    dispatch(minusItem({ id } as CartItem));
   };
 
   const onClickRemove = () => {
@@ -48,12 +48,7 @@ const CartItem = ({
       </div>
       <div className={styles.cart__item_rating}>
         {" "}
-        <StarIcon
-          width={25}
-          height={25}
-          borderColor={"#fe5f1e"}
-          fillPercentage={100}
-        />
+        <StarIcon width={25} height={25} fillPercentage={100} />
         <p style={{ color: "#fe5f1e" }}>{rating}</p>
       </div>
 

@@ -3,10 +3,11 @@ import logoPizza from "../../assets/pizza-logo.png";
 import Search from "../Search/Search";
 import { useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
+import { RootState } from "../../redux/store";
 
 function Header() {
   const { items, totalCount, totalPrice } = useSelector(
-    (state) => state.cartReducer
+    (state:RootState) => state.cartReducer
   );
   const { pathname } = useLocation();
   const isMounted = useRef(false);

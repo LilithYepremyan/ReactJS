@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItem, CartItem } from "../../redux/slices/cartSlice";
 import { Link } from "react-router-dom";
 import Rating from "../Rating/Rating";
+import { RootState } from "../../redux/store";
 
 interface IPizzaProps {
   id: string;
@@ -27,7 +28,7 @@ const PizzaCard = ({
   const dispatch = useDispatch();
   const typeNames = ["тонкое", "традиционное"];
   const cartItem = useSelector(
-    (state) => state.cartReducer.items.find((obj) => obj.id === id)?.count
+    (state:RootState) => state.cartReducer.items.find((obj: CartItem) => obj.id === id)?.count
   );
 
   const addedCount = cartItem ? cartItem : 0;

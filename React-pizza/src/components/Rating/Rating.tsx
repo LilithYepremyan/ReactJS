@@ -22,7 +22,6 @@ const Rating = ({ width = 24, height = 24, rating = 0 }) => {
             width={width}
             height={height}
             fillPercentage={elem}
-            borderColor="#fe5f1e"
           />
         </span>
       ))}

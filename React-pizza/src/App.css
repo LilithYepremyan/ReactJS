@@ -365,7 +365,7 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .pizza-block__price {
   font-weight: bold;
