@@ -7,7 +7,7 @@ import { RootState } from "../../redux/store";
 
 function Header() {
   const { items, totalCount, totalPrice } = useSelector(
-    (state:RootState) => state.cartReducer
+    (state: RootState) => state.cartReducer
   );
   const { pathname } = useLocation();
   const isMounted = useRef(false);

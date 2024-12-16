@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { BASE_URL } from "../redux/slices/pizzaSlice";
 
 const FullPizza: React.FC = () => {
@@ -10,7 +10,7 @@ const FullPizza: React.FC = () => {
     title: string;
     price: number;
   }>();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchPizza() {
@@ -35,6 +35,9 @@ const FullPizza: React.FC = () => {
       <img src={pizza?.imageUrl} alt="" />
       <h2>{pizza?.title}</h2>
       <h4>{pizza?.price} ₽</h4>
+      <Link to="/">
+      <button className="button button--outline button--add">Назад</button>
+      </Link>
     </div>
   );
 };

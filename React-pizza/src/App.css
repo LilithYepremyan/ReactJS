@@ -44,7 +44,7 @@ a {
 }
 .header {
   border-bottom: 1px solid #f6f6f6;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .header .container {
   display: -webkit-box;
@@ -390,10 +390,10 @@ body {
   }
 }
 .content {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .content__title {
-  margin: 35px 0;
+  margin: 25px 0;
 }
 .content__items {
   display: -webkit-box;
