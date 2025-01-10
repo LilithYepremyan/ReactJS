@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/022/231/639/original/abstract-color-polygon-background-design-abstract-geometric-origami-style-with-gradient-free-vector.jpg);
+
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  width: 250px;
+  height: auto;
+  gap: 5px;
+  box-shadow: 1px 2px 4px 1px gray;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.container div:hover {
+  transform: scale(1.05);
+}
+
+.bookImg {
+  width: 150px;
+  height: 200px;
+  object-fit: contain;
+}

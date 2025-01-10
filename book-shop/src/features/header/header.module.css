@@ -1,0 +1,36 @@
+.header {
+  background-color: #113353;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}

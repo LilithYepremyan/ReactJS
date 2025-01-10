@@ -1,0 +1,29 @@
+.bookDetail {
+  display: flex;
+  padding: 20px;
+}
+
+.bookDetail div {
+  width: 50%;
+  padding: 10px 0;
+}
+
+.bookDetailImg img {
+  width: 650px;
+  height: 700px;
+  object-fit: contain;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.info {
+  font-size: 18px;
+}
+
+.buttons{
+  display: flex;
+  gap: 10px;
+}

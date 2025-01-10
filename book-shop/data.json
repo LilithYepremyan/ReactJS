@@ -1,0 +1,121 @@
+{
+  "books": [
+    {
+      "id": "2",
+      "title": "Pride and Prejudice11111111",
+      "author": "Jane Austen",
+      "authorInfo": "Jane Austen was an English novelist known for her works of romantic fiction, including 'Pride and Prejudice' and 'Sense and Sensibility.'",
+      "bookInfo": "A witty and romantic exploration of societal expectations, love, and individual growth, this novel follows Elizabeth Bennet as she navigates misunderstandings and her evolving feelings for the enigmatic Mr. Darcy.",
+      "photo": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781471134746/pride-and-prejudice-9781471134746_hr.jpg",
+      "price": "8.49",
+      "genres": [
+        "Historical"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "1984",
+      "author": "George Orwell",
+      "authorInfo": "George Orwell was an English writer famous for his dystopian novels '1984' and 'Animal Farm.'",
+      "photo": "https://media.senscritique.com/media/000016941169/source_big/1984.jpg",
+      "rating": 4.19,
+      "bookInfo": "This dystopian masterpiece imagines a totalitarian future where surveillance, propaganda, and oppression define daily life. Winston Smith secretly rebels against the Party and its omnipresent leader, Big Brother.",
+      "price": 9.99,
+      "genres": [
+        "Dystopian",
+        "Science Fiction",
+        "Classics"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "authorInfo": "J.D. Salinger was an American writer best known for his novel 'The Catcher in the Rye,' a classic of modern literature.",
+      "photo": "https://th.bing.com/th/id/OIP.EhOg_5HJS4hDMONihBcEoQHaMP?rs=1&pid=ImgDetMain",
+      "rating": 3.81,
+      "bookInfo": "A coming-of-age novel that captures the alienation and disillusionment of youth, it follows Holden Caulfield as he wanders through New York City after being expelled from prep school.",
+      "price": 7.49,
+      "genres": [
+        "Classics",
+        "Fiction",
+        "Coming-of-Age"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "authorInfo": "J.R.R. Tolkien was an English author and philologist, famous for 'The Hobbit' and 'The Lord of the Rings' series.",
+      "photo": "https://3.bp.blogspot.com/-LrW7Yrv4JMY/WcEX3XNdrSI/AAAAAAAABck/zHrKOqssFAMf6visKA-hNp5_AC3zJ6AoACLcBGAs/s1600/the-hobbit-the-desolation-of-smaug.14350.jpg",
+      "rating": 4.27,
+      "bookInfo": "An epic fantasy adventure that follows Bilbo Baggins, a reluctant hobbit, as he joins a group of dwarves on a quest to reclaim their mountain home and its treasure from the dragon Smaug.",
+      "price": 14.99,
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Classics"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "authorInfo": "Ray Bradbury was an American author known for his works of science fiction and dystopian literature, including 'Fahrenheit 451.'",
+      "photo": "https://www.canton4.com/wp-content/uploads/2020/01/portada_fahrenheit-451_ray-bradbury_201910221243-scaled.jpg",
+      "rating": 3.99,
+      "bookInfo": "In a future society where books are banned and 'firemen' burn them, Montag begins to question his role and society's suppression of knowledge after meeting a free-thinking neighbor.",
+      "price": 10.49,
+      "genres": [
+        "Dystopian",
+        "Science Fiction",
+        "Classics"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "authorInfo": "Aldous Huxley was an English writer and philosopher, renowned for his novel 'Brave New World.'",
+      "photo": "https://dwcp78yw3i6ob.cloudfront.net/wp-content/uploads/2016/12/12111228/BraveNewWorld1946HiRes_Reduced.jpg",
+      "rating": 3.99,
+      "bookInfo": "Set in a futuristic world where technology and social engineering dominate, this novel explores themes of individuality, freedom, and the costs of a utopian society.",
+      "price": 9.49,
+      "genres": [
+        "Dystopian",
+        "Science Fiction",
+        "Classics"
+      ]
+    },
+    {
+      "id": "7",
+      "title": " Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "authorInfo": "Ray Bradbury was an American author known for his works of science fiction and dystopian literature, including 'Fahrenheit 451.'",
+      "bookInfo": "In a future society where books are banned and 'firemen' burn them, Montag begins to question his role and society's suppression of knowledge after meeting a free-thinking neighbor.",
+      "rating": "5",
+      "photo": "https://www.canton4.com/wp-content/uploads/2020/01/portada_fahrenheit-451_ray-bradbury_201910221243-scaled.jpg",
+      "price": "8",
+      "genres": [
+        "Classics",
+        "Science Fiction",
+        "Dystopian"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "authorInfo": "Aldous Huxley was an English writer and philosopher, renowned for his novel 'Brave New World.'",
+      "bookInfo": " Set in a futuristic world where technology and social engineering dominate, this novel explores themes of individuality, freedom, and the costs of a utopian society.",
+      "rating": "5",
+      "photo": "https://dwcp78yw3i6ob.cloudfront.net/wp-content/uploads/2016/12/12111228/BraveNewWorld1946HiRes_Reduced.jpg",
+      "price": "8",
+      "genres": [
+        "Classics",
+        "Science Fiction",
+        "Dystopian"
+      ]
+    }
+  ]
+}

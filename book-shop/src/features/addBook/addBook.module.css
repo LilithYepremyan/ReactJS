@@ -1,0 +1,84 @@
+/* addBook.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/022/231/639/original/abstract-color-polygon-background-design-abstract-geometric-origami-style-with-gradient-free-vector.jpg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select {
+  width: 95%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #113353;
+  outline: none;
+}
+
+select option {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+select option:hover {
+  background-color: #113353;
+  color: white;
+  cursor: pointer;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #113353;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #224769;
+}
+
+button:active {
+  background-color: #224769;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+}

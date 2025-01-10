@@ -1,0 +1,25 @@
+.container {
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+
+  background-image: url(https://static.vecteezy.com/system/resources/previews/022/231/639/original/abstract-color-polygon-background-design-abstract-geometric-origami-style-with-gradient-free-vector.jpg);
+}
+
+.authorBlock {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
